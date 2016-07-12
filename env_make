@@ -1,0 +1,4 @@
+VOLUMES = \
+	--volume /usr/bin/qemu-arm-static:/usr/bin/qemu-arm-static \
+	--volume $(shell pwd)/code:/home/asm
+	
