@@ -32,3 +32,12 @@ Data section
 message:
 	.ascii " "
 ```
+
+### Common operations
+
+instruction form:
+```
+<instructions>, <destination>, <operande>, <operande>
+example :
+MUL R0, R1, R2
+```
