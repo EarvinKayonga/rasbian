@@ -5,7 +5,7 @@ VERSION ?= latest
 INSTANCE = rasbianEnv
 PROJECT = rasbian
 
-.PHONY: build run run-daemon rm stop
+.PHONY: build run run-daemon rm stop enter
 
 build:
 	docker build --rm=true --force-rm -t $(NS)/$(PROJECT):$(VERSION) .
@@ -22,5 +22,8 @@ rm: stop
 
 stop:
 	docker stop $(NS)-$(INSTANCE)
+
+enter:
+	docker exec -it $(NS)-$(INSTANCE) bash
 
 default:	run
